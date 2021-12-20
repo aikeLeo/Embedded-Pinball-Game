@@ -1,0 +1,29 @@
+--cpu Cortex-M4.fp
+"gpiodemo\key.o"
+"gpiodemo\main.o"
+"gpiodemo\stm32f4xx_it.o"
+"gpiodemo\stm32f4xx_hal_msp.o"
+"gpiodemo\lcd.o"
+"gpiodemo\stm32f4xx_ll_fsmc.o"
+"gpiodemo\stm32f4xx_hal_sram.o"
+"gpiodemo\stm32f4xx_hal_tim.o"
+"gpiodemo\stm32f4xx_hal_tim_ex.o"
+"gpiodemo\stm32f4xx_hal_rcc.o"
+"gpiodemo\stm32f4xx_hal_rcc_ex.o"
+"gpiodemo\stm32f4xx_hal_flash.o"
+"gpiodemo\stm32f4xx_hal_flash_ex.o"
+"gpiodemo\stm32f4xx_hal_flash_ramfunc.o"
+"gpiodemo\stm32f4xx_hal_gpio.o"
+"gpiodemo\stm32f4xx_hal_dma_ex.o"
+"gpiodemo\stm32f4xx_hal_dma.o"
+"gpiodemo\stm32f4xx_hal_pwr.o"
+"gpiodemo\stm32f4xx_hal_pwr_ex.o"
+"gpiodemo\stm32f4xx_hal_cortex.o"
+"gpiodemo\stm32f4xx_hal.o"
+"gpiodemo\startup_stm32f407xx.o"
+"gpiodemo\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "gpioDemo\gpioDemo.sct"
+
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "gpioDemo.map" -o gpioDemo\gpioDemo.axf
